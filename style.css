@@ -1,0 +1,28 @@
+.child {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 80px;
+  transition: all 1s ease;
+}
+
+.child::after {
+  content: "";
+  position: absolute;
+  margin: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  transition: all 1s ease;
+  transform: scaleX(0);
+}
+
+.child:hover::after {
+  transform: scaleX(1);
+}
+
+.child:hover {
+  color: red;
+}
